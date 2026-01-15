@@ -51,7 +51,7 @@ Extra Services: ${formData.services || "None"}
 Please confirm availability and pricing.`;
 
     window.open(
-      `https://wa.me/254700000000?text=${encodeURIComponent(message)}`,
+      `https://wa.me/254759984132?text=${encodeURIComponent(message)}`,
       "_blank"
     );
   };

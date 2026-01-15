@@ -59,16 +59,22 @@ const Header = () => {
 
         <div className="hidden lg:flex items-center gap-4">
           <Button variant="goldOutline" size="lg" asChild>
-            <a href="#booking">Book Now</a>
+            <a
+              href="https://wa.me/254759984132"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book Now
+            </a>
           </Button>
           <Button variant="whatsapp" size="lg" className="gap-2" asChild>
             <a
-              href="https://wa.me/254700000000"
+              href="https://wa.me/254759984132"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Phone className="h-4 w-4" />
-              WhatsApp
+              0759984132
             </a>
           </Button>
         </div>
@@ -104,16 +110,22 @@ const Header = () => {
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
                 <Button variant="gold" size="lg" asChild>
-                  <a href="#booking">Book Now</a>
+                  <a
+                    href="https://wa.me/254759984132"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Book Now
+                  </a>
                 </Button>
                 <Button variant="whatsapp" size="lg" asChild>
                   <a
-                    href="https://wa.me/254700000000"
+                    href="https://wa.me/254759984132"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Phone className="h-4 w-4 mr-2" />
-                    Chat on WhatsApp
+                    0759984132
                   </a>
                 </Button>
               </div>

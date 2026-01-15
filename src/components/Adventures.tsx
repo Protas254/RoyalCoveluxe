@@ -92,7 +92,13 @@ const Adventures = () => {
                 <div className="flex items-center justify-between">
                   <span className="text-primary font-bold">{adventure.price}</span>
                   <Button variant="goldOutline" size="sm" asChild>
-                    <a href="#booking">Book Now</a>
+                    <a
+                      href="https://wa.me/254759984132"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Book Now
+                    </a>
                   </Button>
                 </div>
               </div>

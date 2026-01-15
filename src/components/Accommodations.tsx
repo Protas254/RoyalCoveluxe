@@ -115,7 +115,13 @@ const Accommodations = () => {
                     <span className="text-foreground/50 text-sm">/night</span>
                   </div>
                   <Button variant="goldOutline" size="sm" asChild>
-                    <a href="#booking">Book Now</a>
+                    <a
+                      href="https://wa.me/254759984132"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Book Now
+                    </a>
                   </Button>
                 </div>
               </div>

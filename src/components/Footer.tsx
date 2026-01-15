@@ -30,7 +30,7 @@ const Footer = () => {
           >
             <h4 className="font-serif text-lg font-bold mb-4 text-primary">Quick Links</h4>
             <ul className="space-y-3">
-              {["Home", "Accommodations", "Adventures", "Amenities", "Book Now"].map((link) => (
+              {["Home", "Accommodations", "Adventures", "Amenities"].map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase().replace(" ", "-")}`}
@@ -40,6 +40,16 @@ const Footer = () => {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href="https://wa.me/254759984132"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground/60 hover:text-primary transition-colors text-sm"
+                >
+                  Book Now
+                </a>
+              </li>
             </ul>
           </motion.div>
 
@@ -62,19 +72,19 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary shrink-0" />
                 <a
-                  href="tel:+254700000000"
+                  href="tel:+254759984132"
                   className="text-foreground/60 hover:text-primary transition-colors text-sm"
                 >
-                  +254 700 000 000
+                  +254 759 984 132
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
                 <a
-                  href="mailto:info@royalcove.co.ke"
+                  href="mailto:royalcoveluxe@gmail.com"
                   className="text-foreground/60 hover:text-primary transition-colors text-sm"
                 >
-                  info@royalcove.co.ke
+                  royalcoveluxe@gmail.com
                 </a>
               </li>
             </ul>
@@ -90,7 +100,7 @@ const Footer = () => {
             <h4 className="font-serif text-lg font-bold mb-4 text-primary">Follow Us</h4>
             <div className="flex gap-4 mb-6">
               {[
-                { icon: Facebook, href: "#" },
+                { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61584581616393" },
                 { icon: Instagram, href: "#" },
                 { icon: Twitter, href: "#" },
               ].map(({ icon: Icon, href }, index) => (
