@@ -1,15 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Facebook, Instagram, Twitter } from "lucide-react";
-import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
-
-const footerLinks = [
-  { name: "Home", href: "/" },
-  { name: "Accommodations", href: "/accommodations" },
-  { name: "Adventures", href: "/adventures" },
-  { name: "Amenities", href: "/amenities" },
-  { name: "Contact", href: "/contact" },
-];
 
 const Footer = () => {
   return (
@@ -39,14 +30,14 @@ const Footer = () => {
           >
             <h4 className="font-serif text-lg font-bold mb-4 text-primary">Quick Links</h4>
             <ul className="space-y-3">
-              {footerLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
+              {["Home", "Accommodations", "Adventures", "Amenities", "Book Now"].map((link) => (
+                <li key={link}>
+                  <a
+                    href={`#${link.toLowerCase().replace(" ", "-")}`}
                     className="text-foreground/60 hover:text-primary transition-colors text-sm"
                   >
-                    {link.name}
-                  </Link>
+                    {link}
+                  </a>
                 </li>
               ))}
             </ul>

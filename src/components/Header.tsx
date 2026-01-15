@@ -1,22 +1,20 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Accommodations", href: "/accommodations" },
-  { name: "Adventures", href: "/adventures" },
-  { name: "Amenities", href: "/amenities" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "#home" },
+  { name: "Accommodations", href: "#accommodations" },
+  { name: "Adventures", href: "#adventures" },
+  { name: "Amenities", href: "#amenities" },
+  { name: "Contact", href: "#contact" },
 ];
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,34 +36,30 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
+        <a href="#home" className="flex items-center gap-3">
           <img
             src={logo}
             alt="RoyalCove"
             className="h-14 md:h-16 w-auto object-contain"
           />
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.name}
-              to={link.href}
-              className={`transition-colors duration-300 text-sm font-medium tracking-wide uppercase ${
-                location.pathname === link.href
-                  ? "text-primary"
-                  : "text-foreground/80 hover:text-primary"
-              }`}
+              href={link.href}
+              className="text-foreground/80 hover:text-primary transition-colors duration-300 text-sm font-medium tracking-wide uppercase"
             >
               {link.name}
-            </Link>
+            </a>
           ))}
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
           <Button variant="goldOutline" size="lg" asChild>
-            <Link to="/#booking">Book Now</Link>
+            <a href="#booking">Book Now</a>
           </Button>
           <Button variant="whatsapp" size="lg" className="gap-2" asChild>
             <a
@@ -99,22 +93,18 @@ const Header = () => {
           >
             <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.name}
-                  to={link.href}
+                  href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`transition-colors py-2 text-lg font-medium ${
-                    location.pathname === link.href
-                      ? "text-primary"
-                      : "text-foreground/80 hover:text-primary"
-                  }`}
+                  className="text-foreground/80 hover:text-primary transition-colors py-2 text-lg font-medium"
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
                 <Button variant="gold" size="lg" asChild>
-                  <Link to="/#booking">Book Now</Link>
+                  <a href="#booking">Book Now</a>
                 </Button>
                 <Button variant="whatsapp" size="lg" asChild>
                   <a
